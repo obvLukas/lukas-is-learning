@@ -1,0 +1,4 @@
+Länkad lista i C.
+Socket server. (Chatt?)
+Driva enkel html hemsida med ovanstående.
+Implementera C i python. Länkad lista på hemsidan?

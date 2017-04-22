@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+# Lukas Hennicks 9509099033
+# Simon Tönnes 9310261558
+
+def col_search(mat, var_search, vecsize):
+
+    vec_state = False
+    from lab1_func import vec_search
+    col_num = 0
+    col_ind = 0
+    #    print vec
+
+    for row in mat:
+        col[col_ind] = row[row_num]
+        col_ind += 1
+        if len(col) == vecsize:
+            col_bool = vec_search(col, 'X', 5)
+                if col_bool == True:
+                    return col_bool
+                else:
+                    col_ind = 0
+                    row_num +=1
+                    

@@ -1,0 +1,14 @@
+
+
+class Pokemon(object):
+
+    def __init__(self, name, sort):
+        self.name = name
+        self.sort = sort
+
+    def displayPokemon(self):
+        print "Namn: ", self.name, "Sort: ", self.sort
+
+lukas = Pokemon("Lukas", "Geek")
+
+lukas.displayPokemon()
