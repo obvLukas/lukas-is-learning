@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from array import array
-
+#from linkedQFile import LinkedQ
 class ArrayQ():
 
     def __init__(self):
@@ -35,7 +35,7 @@ def testQ():
 def main():
     cardVal = raw_input('Skriv din ordning på korten:\n')
     cardVal = cardVal.split(" ")
-    cardVal = [int(i) for i in cardVal]
+    #cardVal = [int(i) for i in cardVal]
     q = ArrayQ()
     shown_cards = []
     i = 0
@@ -71,6 +71,7 @@ def main():
     while True:
         try:
             print('The magician puts %s on the table...') % (shown_cards[cardCount])
+            #print('The magician puts %s on the table...') % (q.dequeue())
             cardCount += 1
             sleep(1)
         except:

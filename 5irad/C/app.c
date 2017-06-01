@@ -47,7 +47,7 @@ void checkCols(char **mat, int row, int col, int n_in_row, char symb){
   int count = 0;
   for(int i = 0; i<col; i++){
 //DBG    printf("\nScanning Row: %d\n", i);
-    for(int j = 0; j<=row; j++){
+    for(int j = 0; j<row; j++){
 //DBG      printf("\n%d: %c\n", j, *(*(mat+i)+j));
       if(*(*(mat+j) + i) == symb){
         count++;
@@ -64,6 +64,36 @@ void checkCols(char **mat, int row, int col, int n_in_row, char symb){
   printf("\nThere is not %d in a row in any of the columns...\n", n_in_row);
 }
 
+int leastOf(int rows, int cols){
+  if(rows < cols){
+    return rows;
+  }
+  else{
+    return cols;
+  }
+}
+
+
+void checkDiag(char **mat, int row, int col, int n_in_row, char symb, int start_ind_i, int start_ind_j){
+  int count = 1;
+  for(int j = 0; j<leastOf(row-start_ind_i, col-start_ind_j); j++){
+    if((*(*(mat + j + start_ind_i) + j + start_ind_j)) == symb){
+//DBG        printf("\nTEST: %c,  i = %d,   j = %d\n", (*(*(mat + j + start_ind_i) + j + start_ind_j)), j + start_ind_i, j + start_ind_j);
+      count++;
+      }
+    else{
+      count = 0;
+    }
+    if(count == n_in_row){
+      printf("\nThere is %d in a row in a diagonal!!!!\n", n_in_row);
+      return;
+      }
+    }
+  printf("\nThere is not %d in a row in any of the down-diagonals...\n", n_in_row);
+}
+
+
+
 
 int main(){
   printf("\n Läser fil... \n");
@@ -79,4 +109,5 @@ int main(){
   //printMat(matris, rows, cols);
   checkRows(matris, rows, cols, 5, 'X');
   checkCols(matris, rows, cols, 5, 'X');
+  checkDiag(matris, rows, cols, 5, 'X', 0, 0);
 }

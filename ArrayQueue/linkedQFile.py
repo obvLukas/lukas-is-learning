@@ -9,8 +9,9 @@ class Node():
 
 
 #TEST should give 5 & 21
-#q = Node(5)
+#q = Node(5, 21)
 #q.setNext(21)
+#p = Node(21, 10)
 #print(q.getVal())
 #print(q.getNext())
 
@@ -50,13 +51,13 @@ class LinkedQ():
             return False
 
 #TESTING LINKED LIST
-#s = LinkedQ()
-#s.enqueue(5)
-#s.enqueue(3)
-#s.enqueue(10)
-#x = s.dequeue()
-#y = s.dequeue()
-#z = s.dequeue()
-#print(x)
-#print(y)
-#print(z)
+s = LinkedQ()
+s.enqueue(5)
+s.enqueue(3)
+s.enqueue(10)
+x = s.dequeue()
+y = s.dequeue()
+z = s.dequeue()
+print(x)
+print(y)
+print(z)

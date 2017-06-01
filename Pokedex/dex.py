@@ -68,7 +68,6 @@ for pokeId in range(0, len(pkvec)):
     tempATK = pkvec[:][pokeId][4]
     tempDEF = pkvec[:][pokeId][5]
     tempTYPE = pkvec[:][pokeId][10]
-
     tempName = Pokedex(tempName,tempTYPE)
     tempName.addNametoList()
     tempName.addHP(tempHP)
@@ -84,7 +83,6 @@ def searchPoke(search):
             break
         else:
             counter += 1
-
 
 
 print('-' * 50)
